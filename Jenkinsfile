@@ -1,10 +1,6 @@
 pipeline {
 
-    agent {
-        node {
-            label 'master'
-        }
-    }
+    agent any
 
     options {
         buildDiscarder logRotator( 
@@ -38,6 +34,7 @@ pipeline {
             steps {
                 sh """
                 echo "Running Unit Tests"
+                git branch
                 """
             }
         }
