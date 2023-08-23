@@ -34,6 +34,7 @@ pipeline {
             steps {
                 sh """
                 echo "Running Unit Tests"
+                git branch
                 """
             }
         }
